@@ -30,7 +30,7 @@
             <td class="th-sm">{{ $item->id }}</td>
             <td class="th-sm">{{ $item->name }}</td>
             <td class="th-sm">{{ $item->porcentaje }}</td>
-            <td class="th-sm">{{ $item->status }}</td>
+            <td class="th-sm">{{ $allStatus[$item->status]['name'] }}</td>
             <td>
                 <form action="{{route('Waiters.deleteStore',$item)}}" method="POST">
                     {{ csrf_field() }}

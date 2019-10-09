@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TipsWaiters;
 use App\Models\Waiters;
+use App\Models\Status;
 
 class TipsWaitersController extends Controller
 {
@@ -21,7 +22,8 @@ class TipsWaitersController extends Controller
             'tips.status'
         ]);
         
+        $allStatus  = Status::all()->keyBy('id');
 
-        return view('Tips.detail',['nameWaiter'=>$Waiters['name'],'TipsWaiter'=>$TipsWaiter]);
+        return view('Tips.detail',['allStatus'=>$allStatus,'nameWaiter'=>$Waiters['name'],'TipsWaiter'=>$TipsWaiter]);
     }
 }

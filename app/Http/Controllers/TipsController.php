@@ -14,7 +14,7 @@ class TipsController extends Controller
     function index()
     {
         $allTips = Tips::all();
-        $allStatus  = Status::all();
+        $allStatus  = Status::all()->keyBy('id');
         
         return view('Tips.index',['allStatus'=>$allStatus,'allTips'=>$allTips]);
     }

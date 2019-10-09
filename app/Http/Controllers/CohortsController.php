@@ -11,8 +11,8 @@ class CohortsController extends Controller
     function index()
     {
         $allCohorts = Cohorts::all();
-        $allStatus  = Status::all();
-        
+        $allStatus  = Status::all()->keyBy('id');
+
         return view('cohorts.index',['allStatus'=>$allStatus,'allCohorts'=>$allCohorts]);
     }
 

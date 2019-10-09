@@ -36,7 +36,7 @@
             <td class="th-sm">{{ $item->amount }}</td>
             <td class="th-sm">{{ $acum }}</td>
             <td class="th-sm">{{ date('d-m-Y', strtotime($item->dateCohort)) }}</td>
-            <td class="th-sm">{{ $item->status }}</td>
+            <td class="th-sm">{{ $allStatus[$item->status]['name'] }}</td>
         </tr>
 
         @endforeach

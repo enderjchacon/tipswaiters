@@ -28,7 +28,7 @@
         <tr>
             <td class="th-sm">{{ $item->id }}</td>
             <td class="th-sm">{{ $item->date->format('d-m-Y') }}</td>
-            <td class="th-sm">{{ $item->status }}</td>
+            <td class="th-sm">{{ $allStatus[$item->status]['name'] }}</td>
             <td>
                 <form action="{{route('cohorts.deleteStore',$item)}}" method="POST">
                     {{ csrf_field() }}

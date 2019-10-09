@@ -11,7 +11,7 @@ class WaitersController extends Controller
     function index()
     {
         $allWaiters = Waiters::all();
-        $allStatus  = Status::all();
+        $allStatus  = Status::all()->keyBy('id');
         
         return view('Waiters.index',['allStatus'=>$allStatus,'allWaiters'=>$allWaiters]);
     }
