@@ -17,7 +17,8 @@ class TipsWaitersController extends Controller
         ->get([
             'tips_waiters.amount',
             'tips.date',
-            'cohorts.date as dateCohort'
+            'cohorts.date as dateCohort',
+            'tips.status'
         ]);
         
 

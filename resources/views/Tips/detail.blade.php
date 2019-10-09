@@ -6,7 +6,7 @@
         <a href="{{route('Waiters.index')}}">
             <button type="button" class="btn btn-success btn-rounded">Volver</button>
         </a>
-        </div>
+    </div>
     <table
     id="dtMaterialDesignExample"
     class="table table-striped pt-10"
@@ -19,6 +19,7 @@
        <th>Monto Ganado</th>
        <th>Monto Acumulado</th>
        <th>Fecha Corte</th>
+       <th>Estatus Propina</th>
     </tr>
     </thead>
     <tbody>
@@ -35,6 +36,7 @@
             <td class="th-sm">{{ $item->amount }}</td>
             <td class="th-sm">{{ $acum }}</td>
             <td class="th-sm">{{ date('d-m-Y', strtotime($item->dateCohort)) }}</td>
+            <td class="th-sm">{{ $item->status }}</td>
         </tr>
 
         @endforeach

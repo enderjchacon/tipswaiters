@@ -22,7 +22,7 @@
             <select name="status" class="browser-default custom-select">
                 <option value="" disabled selected>Estatus</option>
                     @foreach ($allStatus as $item)
-                        <option {{old('status')==$item->id?'selected':''}} value="{{$item->id}}">{{$item->name}}</option>               
+                        <option {{ (old('status')==$item->id ||($Waiters->status == $item->id))?'selected':''}} value="{{$item->id}}">{{$item->name}}</option>               
                     @endforeach
             </select>
             @if($errors->has('status'))

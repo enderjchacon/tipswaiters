@@ -15,7 +15,7 @@
             <select name="status" class="browser-default custom-select">
                 <option value="" disabled selected>Estatus</option>
                     @foreach ($allStatus as $item)
-                        <option value="{{$item->id}}">{{$item->name}}</option>               
+                        <option {{($Cohorts->status == $item->id)?'selected':''}} value="{{$item->id}}">{{$item->name}}</option>               
                     @endforeach
             </select>
             @if($errors->has('status'))
